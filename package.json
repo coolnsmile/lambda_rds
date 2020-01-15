@@ -1,0 +1,22 @@
+{
+  "name": "lambda_rds",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coolnsmile/lambda_rds.git"
+  },
+  "author": "kilhan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coolnsmile/lambda_rds/issues"
+  },
+  "homepage": "https://github.com/coolnsmile/lambda_rds#readme",
+  "devDependencies": {
+    "mysql": "^2.17.1"
+  }
+}
