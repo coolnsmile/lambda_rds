@@ -1,26 +1,19 @@
 var mysql = require('mysql')
 var config = require('./config.json')
-/*
-var pool = mysql.createPool({
-    host : config.dbhost,
-    user : config.dbuser,
-    password : config.dbpassword,
-    database : config.dbname
-});
-console.log('pool : ' + pool);
-*/
 
 
-var connection = mysql.createConnection({
-    host : config.dbhost,
-    user : config.dbuser,
-    password : config.dbpassword,
-    database : config.dbname
-});
+
 
 exports.handler = (event, context, callback) => {
+
+  var connection = mysql.createConnection({
+      host : config.dbhost,
+      user : config.dbuser,
+      password : config.dbpassword,
+      database : config.dbname
+  });
   context.callbackWaitsForEmptyEventLoop = false;
-  connection.query('select * from kh.emp', function (error, results, fields) {
+  connection.query('select * from kh.emp where sleep(1) = 0', function (error, results, fields) {
 
         if (error) {
 
