@@ -13,7 +13,7 @@ exports.handler = (event, context, callback) => {
       database : config.dbname
   });
   context.callbackWaitsForEmptyEventLoop = false;
-  connection.query('select * from kh.emp where sleep(1) = 0', function (error, results, fields) {
+  connection.query('select * from kh.emp where sleep(3) = 0', function (error, results, fields) {
 
         if (error) {
 
